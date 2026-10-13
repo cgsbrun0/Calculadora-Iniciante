@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Calculadora didática para quem está começando a programar.">
+  <title>Calculadora Básica</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand"><span class="mark">∑</span> Calculator</div><span class="tag">feito para você</span></header>
+    <section class="grid">
+      <div>
+        <article class="card calculator" aria-label="Calculadora">
+          <div class="screen" aria-live="polite"><div class="expression" id="expression">Digite uma operação</div><div class="result" id="result">0</div></div>
+          <div class="keys" id="keys">
+            <button class="key action" data-action="clear">AC</button><button class="key action" data-action="delete">⌫</button><button class="key op" data-value="%">%</button><button class="key op" data-value="÷">÷</button>
+            <button class="key" data-value="7">7</button><button class="key" data-value="8">8</button><button class="key" data-value="9">9</button><button class="key op" data-value="×">×</button>
+            <button class="key" data-value="4">4</button><button class="key" data-value="5">5</button><button class="key" data-value="6">6</button><button class="key op" data-value="−">−</button>
+            <button class="key" data-value="1">1</button><button class="key" data-value="2">2</button><button class="key" data-value="3">3</button><button class="key op" data-value="+">+</button>
+            <button class="key zero" data-value="0">0</button><button class="key" data-value=",">,</button><button class="key equal" data-action="calculate">=</button>
+          </div>
+          <p class="hint">Dica: use também o teclado — Enter calcula e Esc limpa.</p>
+        </article>
+        <section class="card history"><div class="history-head"><h2>Histórico recente</h2><button class="clear-history" id="clearHistory">Limpar</button></div><ul id="historyList"><li class="empty">Seus cálculos aparecerão aqui.</li></ul></section>
+      </div>
+      <aside class="card lesson">
+        <div><span class="eyebrow">Como fizemos isso?!</span><h1>OLha como elaboramos</h1><p>Cada operação vira uma expressão que o JavaScript consegue entender.</p></div>
+        <div class="codebox"><div class="codehead"><span>calculadora.js</span><span class="dots"><i></i><i></i><i></i></span></div><pre id="code"></pre></div>
+        <div class="explain"><span class="step">01</span><div><strong>Você monta a expressão</strong><span>Os botões guardam números e operadores em uma variável.</span></div></div>
+        <div class="explain"><span class="step">02</span><div><strong>O programa calcula</strong><span>Ao pressionar “=”, validamos e resolvemos a expressão.</span></div></div>
+      </aside>
+    </section>
+  </main>
+</body>
+<script src="main.js"></script>
+</html>
